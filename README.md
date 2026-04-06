@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sumaiya Talukder — Portfolio
 
-## Getting Started
+A premium, elegant personal portfolio for a Fullstack MERN Developer (Next.js, TypeScript, Tailwind, Framer Motion). Dark/light theme, section reveals, typing hero, magnetic CTAs, gradient project cards, and scroll progress.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customize
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit **`lib/constants.ts`** to update:
 
-## Learn More
+- Name, role, tagline, location, status
+- Resume URL, email, LinkedIn, GitHub
+- Experience and project details (title, features, stack, live/demo links)
+- Open-to-hire copy and roles
 
-To learn more about Next.js, take a look at the following resources:
+Add project screenshots to **`public/projects/`** and set each project’s `image` in `constants.ts` (e.g. `/projects/blood-bank.png`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Docs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **[Design System](docs/DESIGN_SYSTEM.md)** — Colors, typography, motion, components
+- **[Architecture](docs/ARCHITECTURE.md)** — Structure and decisions
+- **[Deployment](docs/DEPLOYMENT.md)** — Vercel and post-deploy checklist
+
+## Tech
+
+- Next.js 16 (App Router), TypeScript, Tailwind CSS v4
+- Framer Motion, next-themes
+- Semantic HTML, responsive layout, accessible controls
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub and import in [Vercel](https://vercel.com). See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for details.
+# resume-portfolio
