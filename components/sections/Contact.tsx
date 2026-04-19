@@ -10,6 +10,8 @@ const LINKS = [
   { label: "Email", href: `mailto:${site.email}`, value: site.email, copy: site.email },
   { label: "LinkedIn", href: site.linkedin, value: "Profile", copy: site.linkedin },
   { label: "GitHub", href: site.github, value: "Profile", copy: site.github },
+  { label: "Phone", href: site.phone, value: site.phone, copy: site.phone },
+  { label: "WhatsApp", href: site.phone, value: site.phone, copy: site.phone },
 ];
 
 export function Contact() {

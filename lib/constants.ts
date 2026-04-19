@@ -13,6 +13,8 @@ export const site = {
   email: "sumaiya@example.com", // Replace with real email
   linkedin: "https://linkedin.com/in/sumaiya-talukder",
   github: "https://github.com/sumaiya-talukder",
+  phone: "01533992209",
+  avatar: "https://i.ibb.co.com/zxHkQn2/Sumaiyaa.jpg"
 } as const;
 
 export const navLinks = [

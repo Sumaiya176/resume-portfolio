@@ -5,6 +5,35 @@ import { motion } from "framer-motion";
 import { site } from "@/lib/constants";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { CursorSpotlight } from "@/components/effects/CursorSpotlight";
+import Image from "next/image";
+
+const wavyBorderVariants = {
+  animate: {
+    borderRadius: [
+      "50%",
+      "45% 55% 35% 65% / 55% 45% 65% 35%",
+      "60% 40% 55% 45% / 40% 60% 45% 55%",
+      "40% 60% 45% 55% / 60% 40% 55% 45%",
+      "50%"
+    ],
+    scale: [1, 1.03, 0.97, 1.02, 1],
+    rotate: [0, 180, 360],
+  }
+};
+
+const secondBorderVariants = {
+  animate: {
+    borderRadius: [
+      "50%",
+      "55% 45% 60% 40% / 45% 55% 40% 60%",
+      "40% 60% 50% 50% / 55% 45% 60% 40%",
+      "50% 50% 45% 55% / 40% 60% 35% 65%",
+      "50%"
+    ],
+    scale: [1.04, 0.98, 1.03, 0.99, 1.04],
+    rotate: [360, 180, 0],
+  }
+};
 
 const ROLES = [
   "Fullstack Engineer.",
@@ -32,7 +61,89 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24"
     >
-      <CursorSpotlight />
+      <CursorSpotlight /> 
+
+      {/* <Image src={site.avatar} alt="Profile Picture" width={200} height={200} className="mb-5 rounded-full border-4 border-[var(--border-accent)]" /> */}
+<motion.div className="relative inline-block mb-5">
+  {/* Outer Wider Weavy Border */}
+  <motion.div
+    className="absolute rounded-full"
+    style={{
+      border: "4px solid var(--border-accent)",
+      top: "-8px",
+      left: "-8px",
+      right: "-8px",
+      bottom: "-8px",
+      opacity: 0.9,
+    }}
+    animate={{
+      borderRadius: [
+        "50%",
+        "46% 54% 44% 56% / 54% 46% 56% 44%",
+        "52% 48% 55% 45% / 47% 53% 45% 55%",
+        "48% 52% 43% 57% / 52% 48% 57% 43%",
+        "50%"
+      ],
+      scale: [1, 1.02, 0.98, 1.01, 1],
+    }}
+    transition={{
+      duration: 12,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "loop",
+    }}
+  />
+
+  {/* Inner Wider Weavy Border - Different pattern */}
+  <motion.div
+    className="absolute rounded-full"
+    style={{
+      border: "3px solid rgba(var(--border-accent-rgb), 0.5)",
+      top: "-4px",
+      left: "-4px",
+      right: "-4px",
+      bottom: "-4px",
+    }}
+    animate={{
+      borderRadius: [
+        "50%",
+        "54% 46% 56% 44% / 46% 54% 44% 56%",
+        "48% 52% 45% 55% / 53% 47% 55% 45%",
+        "52% 48% 57% 43% / 48% 52% 43% 57%",
+        "50%"
+      ],
+      scale: [1, 0.98, 1.02, 0.99, 1],
+    }}
+    transition={{
+      duration: 14,
+      repeat: Infinity,
+      ease: "easeInOut",
+      repeatType: "loop",
+      delay: 0.5,
+    }}
+  />
+
+  {/* Image */}
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+  >
+    <Image 
+      src={site.avatar} 
+      alt="Profile Picture" 
+      width={200} 
+      height={200}
+      className="rounded-full object-cover"
+      style={{ 
+        width: "200px", 
+        height: "200px", 
+        borderRadius: "50%",
+        objectFit: "cover",
+        border: "3px solid var(--border-accent)"
+      }}
+    />
+  </motion.div>
+</motion.div>
 
       {/* Subtle grid background */}
       <div

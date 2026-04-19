@@ -122,6 +122,14 @@ function ProjectCard({
             >
               GitHub
             </a>
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[var(--color-gold)] px-4 py-2 text-sm font-medium text-[var(--bg-primary)] transition-colors hover:bg-[var(--color-gold-light)]"
+            >
+              View Details
+            </a>
           </div>
         </div>
       </div>
