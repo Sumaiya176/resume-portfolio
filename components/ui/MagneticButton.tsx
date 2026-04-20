@@ -13,6 +13,7 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "ghost";
+  download?: string;
 };
 
 export function MagneticButton({
@@ -21,6 +22,7 @@ export function MagneticButton({
   children,
   className,
   variant = "primary",
+  download,
 }: Props) {
   const ref = useRef<HTMLAnchorElement | HTMLButtonElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -64,6 +66,7 @@ export function MagneticButton({
         ref={ref as React.RefObject<HTMLAnchorElement>}
         href={href}
         className={cn(base, variants[variant], className)}
+        download={download}
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}
       >

@@ -9,7 +9,7 @@ export const site = {
   location: "Bangladesh",
   languages: ["Bangla", "English"],
   status: "Open to Hire",
-  resumeUrl: "#", // Replace with actual resume URL or /resume.pdf
+  resumeUrl: "/sumaiya-resume.pdf", // Replace with actual resume URL or /resume.pdf
   email: "sumaiya@example.com", // Replace with real email
   linkedin: "https://linkedin.com/in/sumaiya-talukder",
   github: "https://github.com/sumaiya-talukder",

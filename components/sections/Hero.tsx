@@ -212,7 +212,7 @@ export function Hero() {
           <MagneticButton href="#contact" variant="secondary">
             Contact Me
           </MagneticButton>
-          <MagneticButton href={site.resumeUrl} variant="ghost">
+          <MagneticButton href={site.resumeUrl} download="Sumaiya-Resume.pdf" variant="ghost">
             Download Resume
           </MagneticButton>
         </motion.div>
